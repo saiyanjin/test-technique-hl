@@ -49,3 +49,12 @@ Créer un menu contextuel qui s’affiche à la position du curseur et récupèr
 - TypeScript  
 - Gestion des événements et asynchrone  
 
+---
+
+## Exercice 3 : Compréhension de vue
+
+**Objectif :**
+Expliquer pourquoi l'animation ne fonctionne pas, le lien du dépôt : https://github.com/HarfangLab/test-technique-frontend
+
+Je pense que l'animation ne fonctionne pas car le composant `<router-view>` est recréé à chaque changement d’onglet ce qui rammène la barre verte au début à chaque fois.
+`<router-view :key="this.$route.path" />` le key change quand je change d'onglet donc ça va reset.
