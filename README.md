@@ -25,7 +25,13 @@ Créer un champ de formulaire pour renseigner un numéro de téléphone avec son
 **Technologies :**  
 - Vue 3 Composition API  
 - TypeScript  
-- `ref` et `watch` pour la réactivité  
+- `ref` et `watch` pour la réactivité
+
+**Choix techniques :**  
+- **Composition API + TypeScript** : Modularité, lisibilité et sécurité des types pour un composant réutilisable.  
+- **v-model multiples et événements personnalisés** : Communication claire entre parent et enfant sans dépendre d’un store global.  
+- **`watch` et parsing automatique** : Synchronisation automatique des champs avec réactivité.  
+- **Focus et maxlength** : Amélioration de l’UX et robustesse du formulaire.
 
 ---
 
@@ -47,7 +53,13 @@ Créer un menu contextuel qui s’affiche à la position du curseur et récupèr
 **Technologies :**  
 - Vue 3 Composition API  
 - TypeScript  
-- Gestion des événements et asynchrone  
+- Gestion des événements et asynchrone
+
+**Choix techniques :**  
+- **Composition API + TypeScript** : Découplage de la logique du menu et typage correct des réponses de l’API.  
+- **`ref` pour coordonnées et visibilité** : Menu réactif à la position du curseur et aux interactions utilisateur.  
+- **Appel asynchrone avec gestion des états** : Expérience utilisateur fluide et robuste, même en cas d’erreur réseau ou mot introuvable.  
+- **Événement global pour fermer le menu** : Garantit une fermeture fiable du menu sans effets secondaires.
 
 ---
 
