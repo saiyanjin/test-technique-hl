@@ -49,9 +49,3 @@ Créer un menu contextuel qui s’affiche à la position du curseur et récupèr
 - TypeScript  
 - Gestion des événements et asynchrone  
 
----
-
-## Structure du projet
-
-
-
