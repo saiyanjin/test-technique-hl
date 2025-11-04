@@ -21,20 +21,18 @@
 import { ref, watch } from "vue";
 import InternationalPhoneNumber from './components/InternationalPhoneNumber.vue';
 
-const countryCode = ref('33'); // Par défaut pour la France
+const countryCode = ref('33'); 
 const phoneNumber = ref('');
 const internationalPhoneNumber = ref('');
 
-// Mettre à jour countryCode et phoneNumber si internationalPhoneNumber change
 watch(internationalPhoneNumber, (newVal) => {
   const match = newVal.match(/^\+(\d{1,2})\s*(\d{0,9})$/);
   if (match) {
-    countryCode.value = match[1] ?? '';  // fallback si undefined
-    phoneNumber.value = match[2] ?? '';  // fallback si undefined
+    countryCode.value = match[1] ?? ''; 
+    phoneNumber.value = match[2] ?? ''; 
   }
 });
 
-// Mettre à jour internationalPhoneNumber si countryCode ou phoneNumber changent
 watch([countryCode, phoneNumber], () => {
   internationalPhoneNumber.value = `+${countryCode.value} ${phoneNumber.value}`;
 });
